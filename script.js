@@ -62,6 +62,7 @@ let numbers = document.querySelectorAll("#numbers .button");
 numbers.forEach((number) => {
     number.addEventListener("click", () => {
         if (array[array.length - 1] == "=") {
+            array = [];
             operation.value = "";
             result.value = "";
         }
