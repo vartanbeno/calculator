@@ -23,6 +23,7 @@ function operate(operator) {
             array.push("=");
             operation.value = array.join(" ").replace(/[*]/g, "x").replace(/[/]/g, "÷");
             result.value = eval(eval(array.join("").slice(0, -1)).toFixed(6));
+            if (result.value == Infinity || result.value == -Infinity) result.value = "😱    ∞    😱"
         break;
     }
     if (operator != "result") {
@@ -61,10 +62,11 @@ percentage.addEventListener("click", () => {
 let numbers = document.querySelectorAll("#numbers .button");
 numbers.forEach((number) => {
     number.addEventListener("click", () => {
+        if (number.getAttribute("data-key") == "8") return;
         if (array[array.length - 1] == "=") {
             array = [];
             operation.value = "";
-            result.value = "";
+            result.value = "0";
         }
         if (result.value == "0") {
             if (number.textContent == ".") {
@@ -80,6 +82,12 @@ numbers.forEach((number) => {
         }
         result.value += number.textContent;
     })
+})
+
+let backspace = document.querySelector(`.button[data-key="8"]`)
+backspace.addEventListener("click", () => {
+    result.value = result.value.slice(0, -1);
+    if (result.value == "") result.value = "0";
 })
 
 let array = [];
