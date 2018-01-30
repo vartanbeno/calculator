@@ -11,38 +11,41 @@
         <center><h1 id="title">Calculator</h1></center>
         <div id="container">
             <div id="screen">
+                <div id="operation">
+                    <input value="">
+                </div>
                 <div id="input">
-                    <input value="" disabled>
+                    <input value="0" disabled>
                 </div>
             </div>
             <div id="buttons">
                 <div id="leftPart">
                     <div id="misc">
-                        <div class="button"><p>AC</p></div>
-                        <div class="button"><p>±</p></div>
-                        <div class="button"><p>%</p></div>
+                        <div class="button" id="clear" data-key="67"><p>AC</p></div>
+                        <div class="button" id="changeSign"><p>±</p></div>
+                        <div class="button" id="percentage"><p>%</p></div>
                     </div>
                     <div id="numbers">
-                        <div class="button"><p>7</p></div>
-                        <div class="button"><p>8</p></div>
-                        <div class="button"><p>9</p></div>
-                        <div class="button"><p>4</p></div>
-                        <div class="button"><p>5</p></div>
-                        <div class="button"><p>6</p></div>
-                        <div class="button"><p>1</p></div>
-                        <div class="button"><p>2</p></div>
-                        <div class="button"><p>3</p></div>
-                        <div class="button"><p>0</p></div>
-                        <div class="button"><p>.</p></div>
+                        <div class="button" data-key="55"><p>7</p></div>
+                        <div class="button" data-key="56"><p>8</p></div>
+                        <div class="button" data-key="57"><p>9</p></div>
+                        <div class="button" data-key="52"><p>4</p></div>
+                        <div class="button" data-key="53"><p>5</p></div>
+                        <div class="button" data-key="54"><p>6</p></div>
+                        <div class="button" data-key="49"><p>1</p></div>
+                        <div class="button" data-key="50"><p>2</p></div>
+                        <div class="button" data-key="51"><p>3</p></div>
+                        <div class="button" data-key="48"><p>0</p></div>
+                        <div class="button" data-key="190"><p>.</p></div>
                     </div>
                 </div>
                 <div id="rightPart">
                     <div id="operators">
-                        <div class="button"><p>÷</p></div>
-                        <div class="button"><p>x</p></div>
-                        <div class="button"><p>-</p></div>
-                        <div class="button"><p>+</p></div>
-                        <div class="button"><p>=</p></div>
+                        <div class="button" id="division" data-key="191"><p>÷</p></div>
+                        <div class="button" id="multiplication" data-key="88"><p>x</p></div>
+                        <div class="button" id="subtraction" data-key="189"><p>-</p></div>
+                        <div class="button" id="addition" data-key="187"><p>+</p></div>
+                        <div class="button" id="result" data-key="13"><p>=</p></div>
                     </div>
                 </div>
             </div>

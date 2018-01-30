@@ -1,7 +1,14 @@
 body {
     margin: 0;
-    background-color: rgb(241, 223, 223);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: linear-gradient(to right,  rgb(158, 157, 157), white);
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 100;
+}
+
+h1 {
+    font: inherit;
+    font-size: 64px;
+    margin: 0;
 }
 
 #container {
@@ -10,10 +17,13 @@ body {
     width: 330px;
     background-color: black;
     padding: 14px;
+    box-shadow: -5px -5px 8px rgb(158, 157, 157);
+    border-bottom: 5px solid rgb(66, 66, 66);
+    border-right: 5px solid rgb(66, 66, 66);
 }
 
 #container, #container div {
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 #screen {
@@ -22,21 +32,37 @@ body {
     height: 25%;
 }
 
+#screen #operation {
+    float: top;
+    height: 40%;
+}
+
 #screen #input {
     position: absolute;
     bottom: 0;
+    height: 60%;
 }
 
-#screen #input input {
+#screen input {
     width: 100%;
-    height: 80%;
+    height: 100%;
     border-radius: 20px;
     outline: none;
     text-align: right;
     background-color: inherit;
     border: none;
-    font-size: 72px;
+    font-size: 24px;
     color: white;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 100;
+}
+
+#screen #operation input {
+    font-size: 24px;
+}
+
+#screen #input input {
+    font-size: 72px;
 }
 
 #buttons {
@@ -78,7 +104,7 @@ body {
 #leftPart #numbers div.button {
     height: 20%;
     margin: 3%;
-    background-color: rgb(46, 43, 43);
+    background-color: rgb(71, 67, 67);
     text-align: center;
     border-radius: 50%;
     color: white;
@@ -115,4 +141,9 @@ div.button p {
 
 .button {
     font-size: 32px;
+}
+
+div.button:hover {
+    filter: brightness(120%);
+    cursor: pointer;
 }
