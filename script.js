@@ -4,6 +4,7 @@ $(".button").css({
 });
 
 function operate(operator) {
+    if (array[array.length - 1] == "=") array = [];         // to prevent errors with multiple "=" in the array when it get evaluated
     array.push(Number(result.value));
     switch (operator) {
         case "division":
@@ -22,7 +23,6 @@ function operate(operator) {
             array.push("=");
             operation.value = array.join(" ").replace(/[*]/g, "x").replace(/[/]/g, "÷");
             result.value = eval(eval(array.join("").slice(0, -1)).toFixed(6));
-            array = [];
         break;
     }
     if (operator != "result") {
