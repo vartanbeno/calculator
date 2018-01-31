@@ -3,6 +3,7 @@ body {
     background: linear-gradient(to right,  rgb(158, 157, 157), white);
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 100;
+    padding-bottom: 15px;
 }
 
 h1 {
@@ -33,13 +34,10 @@ h1 {
 }
 
 #screen #operation {
-    float: top;
     height: 40%;
 }
 
 #screen #input {
-    position: absolute;
-    bottom: 0;
     height: 60%;
 }
 
